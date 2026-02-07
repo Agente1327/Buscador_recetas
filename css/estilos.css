@@ -1,0 +1,81 @@
+/* Fuente general */
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #f1f3f5, #e9ecef);
+}
+
+/* Encabezado */
+.header-top{
+    background: #212529;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.navbar-brand{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.nav-link{
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    transform: scale(1.05);
+}
+
+/* Título */
+.titulo{
+    text-align: center;
+    font-weight: 600;
+    color: #dc3545;
+}
+
+/* Formulario */
+.formulario{
+    width: 60%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    border: none;
+}
+
+/* Select */
+.form-select{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-select:focus{
+    box-shadow: 0 0 8px rgba(220,53,69,0.6);
+}
+
+/* Cards resultados */
+#resultado .card{
+    transition: 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#resultado .card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Modal */
+.modal-content{
+    border-radius: 15px;
+}
+
+/* Toast */
+.toast{
+    border-radius: 12px;
+}
