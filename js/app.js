@@ -222,3 +222,40 @@ function iniciarApp() {
 }
 
 document.addEventListener('DOMContentLoaded', iniciarApp);
+
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const letras = "01";
+const fuente = 14;
+const columnas = canvas.width / fuente;
+
+const gotas = [];
+
+for(let i=0;i<columnas;i++){
+    gotas[i]=1;
+}
+
+function dibujarMatrix(){
+    ctx.fillStyle = "rgba(0,0,0,0.05)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle = "#00ff9c";
+    ctx.font = fuente+"px monospace";
+
+    for(let i=0;i<gotas.length;i++){
+        const texto = letras.charAt(Math.random()*letras.length);
+        ctx.fillText(texto,i*fuente,gotas[i]*fuente);
+
+        if(gotas[i]*fuente > canvas.height && Math.random()>0.975){
+            gotas[i]=0;
+        }
+
+        gotas[i]++;
+    }
+}
+
+setInterval(dibujarMatrix,50);
