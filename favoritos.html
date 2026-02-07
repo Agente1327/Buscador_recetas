@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador Recetas Comida</title>
+    <title>Favoritos - Buscador Recetas</title>
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Tus estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
+
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-gradient p-3">
         <div class="container-fluid">
             <a class="navbar-brand fs-4" href="index.html">Buscador de Recetas</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -22,46 +32,49 @@
                         <a class="nav-link fs-4" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-4 active" aria-current="page"  href="favoritos.html">Mis Favoritos</a>
+                        <a class="nav-link fs-4 active" href="favoritos.html">Mis Favoritos</a>
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
 
-
-    <div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+    <!-- MODAL -->
+    <div class="modal fade" id="modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-3 font-bold" id="staticBackdropLabel"></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-3"></h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body"></div>
-                <div class="modal-footer flex justify-content-between">
-                </div>
+                <div class="modal-footer"></div>
             </div>
         </div>
     </div>
 
+    <!-- CONTENIDO -->
     <main class="mt-5 container-lg">
-      <h2 class="text-center fs-1">Favoritos</h2>
-      <div id="resultado" class="favoritos row"></div>
+        <h2 class="text-center fs-1">Favoritos</h2>
+
+        <div id="resultado" class="favoritos row"></div>
     </main>
 
-
+    <!-- TOAST -->
     <div class="toast-container position-fixed top-0 end-0 p-3">
-        <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="toast" class="toast">
             <div class="toast-header bg-danger text-white">
-                <strong class="me-auto text-white">App Recetas</strong>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                <strong class="me-auto">App Recetas</strong>
+                <button class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
             </div>
             <div class="toast-body"></div>
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
+
 </body>
 </html>
+
