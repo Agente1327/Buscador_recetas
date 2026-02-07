@@ -1,153 +1,133 @@
-:root{
-    --verde:#00ff9c;
-    --negro:#000;
-    --gris:#0a0a0a;
+/* Fuente */
+body{
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    color: white;
+    overflow-x: hidden;
 }
 
-/* ========================= */
-/* MATRIX FONDO */
-/* ========================= */
-
+/* Fondo matrix */
 #matrix{
     position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-2;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-/* ========================= */
-/* LOADER */
-/* ========================= */
-
-#loader{
-    position: fixed;
-    width:100%;
-    height:100%;
-    background:black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-    color:var(--verde);
-    font-family: monospace;
-    text-shadow:0 0 15px var(--verde);
-    animation: desaparecer 2s forwards;
-    animation-delay:2s;
+/* Navbar futurista */
+.navbar-futurista{
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #00ff9c;
 }
 
-@keyframes desaparecer{
+/* Logo */
+.logo{
+    color: white !important;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    color: #00ff9c !important;
+}
+
+/* Nombre animado */
+.nombre-navbar{
+    color: #00ff9c;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: glowNombre 2s infinite alternate;
+}
+
+@keyframes glowNombre{
+    from{
+        text-shadow: 0 0 5px #00ff9c;
+    }
     to{
-        opacity:0;
-        visibility:hidden;
+        text-shadow: 0 0 20px #00ff9c, 0 0 40px #00ff9c;
     }
 }
 
-/* ========================= */
-/* BODY */
-/* ========================= */
-
-body{
-    font-family:'Poppins', sans-serif;
-    background:black;
-    color:white;
-}
-
-/* ========================= */
-/* HEADER */
-/* ========================= */
-
+/* Header */
 .header-top{
-    background:black;
-    color:var(--verde);
-    text-align:center;
-    text-shadow:0 0 8px var(--verde);
+    text-align: center;
+    background: black;
+    padding: 8px;
+    border-bottom: 1px solid #00ff9c;
 }
 
-/* ========================= */
-/* NAVBAR */
-/* ========================= */
-
-.navbar{
-    background:black !important;
-    border-bottom:1px solid var(--verde);
-    box-shadow:0 0 20px rgba(0,255,156,0.3);
-}
-
-.navbar-brand{
-    color:var(--verde) !important;
-    text-shadow:0 0 10px var(--verde);
-}
-
-/* ========================= */
-/* TITULO */
-/* ========================= */
-
+/* Título */
 .titulo{
-    color:var(--verde);
-    text-shadow:0 0 15px var(--verde);
-    text-align:center;
-    animation: brillo 2s infinite alternate;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: moverTitulo 3s infinite alternate;
 }
 
-@keyframes brillo{
-    from{opacity:0.5;}
-    to{opacity:1;}
+@keyframes moverTitulo{
+    from{ transform: translateY(0px); }
+    to{ transform: translateY(10px); }
 }
 
-/* ========================= */
-/* FORMULARIO */
-/* ========================= */
-
+/* Formulario */
 .formulario{
-    background:#050505 !important;
-    border:1px solid var(--verde);
-    box-shadow:0 0 25px rgba(0,255,156,0.3);
+    background: rgba(0,0,0,0.7);
+    border: 1px solid #00ff9c;
+    color: white;
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.4s;
 }
 
-/* SELECT */
-
-.form-select{
-    background:black;
-    color:white;
-    border:1px solid var(--verde);
+.formulario:hover{
+    box-shadow: 0 0 20px #00ff9c;
 }
 
-.form-select:focus{
-    box-shadow:0 0 15px var(--verde);
+/* Cards recetas */
+.card{
+    background: rgba(0,0,0,0.7);
+    border: 1px solid #00ff9c;
+    color: white;
+    transition: 0.4s;
 }
 
-/* ========================= */
-/* CARDS 3D */
-/* ========================= */
-
-#resultado .card{
-    background:#0a0a0a;
-    border:1px solid rgba(0,255,156,0.3);
-    transition:0.4s;
-    transform-style:preserve-3d;
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #00ff9c;
 }
 
-#resultado .card:hover{
-    transform: rotateX(5deg) rotateY(5deg) scale(1.03);
-    box-shadow:0 0 25px var(--verde);
+/* Botones */
+.btn-danger{
+    background: #00ff9c;
+    border: none;
+    color: black;
+    font-weight: bold;
 }
 
-/* ========================= */
-/* MODAL */
-/* ========================= */
-
-.modal-content{
-    background:black;
-    border:1px solid var(--verde);
+.btn-danger:hover{
+    background: #00cc7a;
 }
 
-/* ========================= */
-/* TOAST */
-/* ========================= */
+/* Modal */
+.modal-futurista{
+    background: rgba(0,0,0,0.9);
+    border: 1px solid #00ff9c;
+}
 
-.toast{
-    background:black;
-    border:1px solid var(--verde);
+/* Toast */
+.toast-futurista{
+    background: #00ff9c;
+    color: black;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-link{
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #00ff9c !important;
 }
